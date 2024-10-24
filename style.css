@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+  overflow: hidden;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 175px;
+  font-family: sans-serif;
+  cursor: pointer;
+  border: 0;
+  background: none;
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(4),
+.box:nth-child(5) {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.box:nth-child(3),
+.box:nth-child(6) {
+  border-bottom: 1px solid black;
+}
+
+.box:nth-child(7),
+.box:nth-child(8) {
+  border-right: 1px solid black;
+}
+
+.icon {
+  font-size: 100px;
+  pointer-events: none;
+}
+
+.reset {
+  padding: 20px 60px;
+  font-size: 24px;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 150%;
+  background: #000;
+  display: none;
+}
+.middle-vertical {
+  display: block;
+}
+
+.diagonal-left {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  display: block;
+}
+
+.diagonal-right {
+  transform: translate(-50%, -50%) rotate(-135deg);
+  display: block;
+}
+
+.middle-horizontal {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  display: block;
+}
+
+.left-vertical {
+  left: 17.5%;
+  display: block;
+}
+
+.right-vertical {
+  left: 83.5%;
+  display: block;
+}
+
+.top-horizontal {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  top: 17.5%;
+  display: block;
+}
+
+.bottom-horizontal {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  top: 82.5%;
+  display: block;
+}
